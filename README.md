@@ -7,14 +7,12 @@
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
 
 🔗 **[Clique aqui para acessar ](https://ylordakira.github.io/portfolio-site/)** &nbsp;·&nbsp; 
 
 <br/>
 
 ![Status](https://img.shields.io/badge/status-online-67e8a0?style=flat-square)
-![Último commit](https://img.shields.io/github/last-commit/yLordAkira/portfolio?style=flat-square&color=6ee7f7)
 
 </div>
 
