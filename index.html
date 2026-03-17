@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruno Lopes — Dev Front-End</title>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+
+
+  <canvas id="bg-canvas"></canvas>
+
+
+  <nav id="navbar">
+    <a href="#" class="nav-logo">
+      <span class="logo-br">[</span>
+      <span class="logo-nm">BL</span>
+      <span class="logo-br">]</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#sobre">sobre</a></li>
+      <li><a href="#habilidades">habilidades</a></li>
+      <li><a href="#projetos">projetos</a></li>
+      <li><a href="#contato">contato</a></li>
+    </ul>
+
+    <button class="hamburger" id="ham" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+
+      <!-- MOBILE MENU -->
+
+  <div class="mobile-menu" id="mob">
+    <div class="mob-ov" id="mobOv"></div>
+    <div class="mob-drawer">
+
+      <div class="d-head">
+        <a href="#" class="d-logo">[<span>BL</span>]</a>
+        <button class="d-close" id="dc">✕</button>
+      </div>
+
+      <nav class="d-nav">
+        <a href="#sobre"       class="dl"><span class="d-ic">👤</span>Sobre</a>
+        <a href="#habilidades" class="dl"><span class="d-ic">⚡</span>Habilidades</a>
+        <a href="#projetos"    class="dl"><span class="d-ic">🗂️</span>Projetos</a>
+        <a href="#contato"     class="dl"><span class="d-ic">✉️</span>Contato</a>
+      </nav>
+
+      <div class="d-foot">
+        <div class="avail">Aberto a oportunidades</div>
+        <div class="d-ctc">
+          <a href="mailto:ylordakira@gmail.com">✉️ Email</a>
+          <a href="https://linkedin.com/in/bruno-lopes-768888339" target="_blank">💼 LinkedIn</a>
+          <a href="https://github.com/yLordAkira" target="_blank">🐙 GitHub</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section style="position:relative; z-index:1; overflow:hidden;">
+    <div class="hero">
+
+      <!-- Left content -->
+      <div class="hero-l">
+        <div class="hero-badge">Disponível para estágio &amp; primeiro emprego</div>
+
+        <h1 class="h1">
+          Bruno<br>
+          <span class="grad">Lopes</span>
+        </h1>
+
+        <p class="hero-sub">
+          24 anos · Estudante de <strong>Análise e Desenvolvimento de Sistemas</strong>
+          · Construindo interfaces e soluções que resolvem problemas reais.
+        </p>
+
+        <div class="hero-typed">
+          <span class="pr">$ </span><span id="typed"></span><span class="cc-cursor"></span>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="#projetos" class="btn-glow">Ver projetos →</a>
+          <a href="#contato"  class="btn-ghost">Entrar em contato</a>
+        </div>
+      </div>
+
+      <!-- Right: floating code card -->
+      <div class="hero-r">
+        <div class="code-card">
+          <div class="cc-bar">
+            <div class="cc-dot"></div>
+            <div class="cc-dot"></div>
+            <div class="cc-dot"></div>
+          </div>
+          <div><span class="ck">const</span> <span class="cf">dev</span> = {</div>
+          <div>&nbsp;&nbsp;<span class="cs">name</span>: <span class="cs">"Bruno Lopes"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="cs">age</span>: <span class="cn">24</span>,</div>
+          <div>&nbsp;&nbsp;<span class="cs">curso</span>: <span class="cs">"ADS"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="cs">stack</span>: [<span class="cs">"React"</span>, <span class="cs">"JS"</span>, <span class="cs">"AppSheet"</span>],</div>
+          <div>&nbsp;&nbsp;<span class="cs">status</span>: <span class="cs">"open_to_work"</span>,</div>
+          <div>&nbsp;&nbsp;<span class="cf">learn</span>: () <span class="ck">=></span> <span class="cs">"∞"</span></div>
+          <div>}<span class="cc-cursor"></span></div>
+          <div class="cmt">// sempre em evolução 🚀</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <div class="stats-strip">
+    <div class="stat reveal">
+      <span class="stat-num" data-target="2">0</span>
+      <span class="stat-lbl">Projetos</span>
+    </div>
+    <div class="stat reveal rd1">
+      <span class="stat-num" data-target="3">0</span>
+      <span class="stat-lbl">Tecnologias</span>
+    </div>
+    <div class="stat reveal rd2">
+      <span class="stat-num" data-target="24">0</span>
+      <span class="stat-lbl">Anos</span>
+    </div>
+    <div class="stat reveal rd3">
+      <span class="stat-num">∞</span>
+      <span class="stat-lbl">Vontade</span>
+    </div>
+  </div>
+
+  <!-- SOBRE -->
+  <section class="s" id="sobre">
+    <div class="reveal">
+      <span class="s-tag">Quem sou eu</span>
+      <h2 class="s-title">Sobre mim</h2>
+    </div>
+
+    <div class="about-wrap">
+
+      <!-- Card -->
+      <div class="reveal rd1">
+        <div class="about-card">
+        <div class="av-ring">
+        <div class="av-inner">
+        <img src="images/foto.jpg" alt="Bruno Lopes"></div></div>
+          <div class="a-name">Bruno Lopes</div>
+          <div class="a-role">front-end_dev.exe</div>
+          <div class="info-rows">
+            <div class="i-row"><span class="i-ic">🎂</span>24 anos</div>
+            <div class="i-row"><span class="i-ic">🎓</span>Análise e Desenvolvimento de Sistemas</div>
+            <div class="i-row"><span class="i-ic">🔧</span>Técnico em Hardware &amp; Redes</div>
+            <div class="i-row"><span class="i-ic">📍</span>Mauá, São Paulo — BR</div>
+            <div class="i-row"><span class="i-ic">✉️</span>ylordakira@gmail.com</div>
+          </div>
+          <div class="open-chip">Aberto a oportunidades</div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="about-text reveal rd2">
+        <p>
+          Olá! Sou um desenvolvedor em constante evolução, apaixonado por criar interfaces
+          e soluções que <strong>resolvem problemas reais</strong>. Comecei pela área de
+          hardware e redes, o que me deu base sólida em pensamento técnico e infraestrutura.
+        </p>
+        <p>
+          Hoje focado em <strong>desenvolvimento Front-End</strong>, aprofundando HTML, CSS,
+          JavaScript e React — enquanto já levo projetos reais para produção com plataformas
+          no-code como <strong>AppSheet</strong>.
+        </p>
+        <p>
+          Acredito que a melhor forma de crescer é <strong>construindo coisas de verdade</strong>.
+          Cada projeto é uma nova camada de aprendizado.
+        </p>
+        <p>
+          Busco minha <strong>primeira oportunidade profissional</strong> — estagiário ou
+          dev júnior — para crescer, contribuir e evoluir junto com uma equipe.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section class="s" id="habilidades">
+    <div class="reveal">
+      <span class="s-tag">Tecnologias</span>
+      <h2 class="s-title">Habilidades</h2>
+      <p class="s-sub">Um conjunto em constante expansão — do front-end moderno a dados, IA e no-code aplicado ao mundo real.</p>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="sk-card reveal rd1">
+        <div class="sk-icon ic-c">⚛️</div>
+        <h4>Front-End</h4>
+        <p>Interfaces modernas, responsivas e com ótima experiência de uso.</p>
+        <div class="tags">
+          <span class="t tc">React</span>
+          <span class="t tc">JavaScript</span>
+          <span class="t tm">HTML5</span>
+          <span class="t tm">CSS Modules</span>
+          <span class="t tm">Vite</span>
+        </div>
+      </div>
+
+      <div class="sk-card reveal rd2">
+        <div class="sk-icon ic-p">🧩</div>
+        <h4>No-Code / Low-Code</h4>
+        <p>Aplicativos funcionais e integrados com lógica de produto robusta.</p>
+        <div class="tags">
+          <span class="t tp">AppSheet</span>
+          <span class="t tp">Google Sheets</span>
+          <span class="t tm">Google Drive</span>
+          <span class="t tm">Automações</span>
+        </div>
+      </div>
+
+      <div class="sk-card reveal rd3">
+        <div class="sk-icon ic-g">🌐</div>
+        <h4>Infraestrutura &amp; Redes</h4>
+        <p>Formação técnica certificada em hardware, conectividade e suporte.</p>
+        <div class="tags">
+          <span class="t tg">TCP/IP</span>
+          <span class="t tg">Hardware</span>
+          <span class="t tm">Suporte Técnico</span>
+          <span class="t tm">Manutenção</span>
+        </div>
+      </div>
+
+      <div class="sk-card reveal rd4">
+        <div class="sk-icon ic-o">🛠️</div>
+        <h4>Ferramentas &amp; Workflow</h4>
+        <p>Controle de versão, documentação e ferramentas para dev moderno.</p>
+        <div class="tags">
+          <span class="t tc">Git</span>
+          <span class="t tc">GitHub</span>
+          <span class="t tm">NotebookLM</span>
+          <span class="t tm">VS Code</span>
+        </div>
+      </div>
+
+      <div class="sk-card reveal rd1">
+        <div class="sk-icon ic-g">🗄️</div>
+        <h4>
+          Dados &amp; BI
+          <span style="font-size:.7rem;color:var(--a3);font-weight:400;font-family:'JetBrains Mono',monospace;margin-left:.4rem">aprendendo</span>
+        </h4>
+        <p>Análise e visualização de dados — do Excel ao banco relacional e dashboards interativos.</p>
+        <div class="tags">
+          <span class="t tg">Excel</span>
+          <span class="t tg">Power BI</span>
+          <span class="t tg">MySQL</span>
+          <span class="t tg">SQL</span>
+          <span class="t tg">Python</span>
+        </div>
+      </div>
+
+      <div class="sk-card reveal rd2">
+        <div class="sk-icon ic-p">🤖</div>
+        <h4>
+          Inteligência Artificial
+          <span style="font-size:.7rem;color:var(--a2);font-weight:400;font-family:'JetBrains Mono',monospace;margin-left:.4rem">aprendendo</span>
+        </h4>
+        <p>Exploração de conceitos de IA, prompting e aplicação prática de ferramentas inteligentes no dia a dia.</p>
+        <div class="tags">
+          <span class="t tp">IA Generativa</span>
+          <span class="t tp">Prompting</span>
+          <span class="t tp">NotebookLM</span>
+          <span class="t tm">Python básico</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PROJETOS
+  ══════════════════════════════════════ -->
+  <section class="s" id="projetos">
+    <div class="reveal">
+      <span class="s-tag">Trabalhos</span>
+      <h2 class="s-title">Projetos</h2>
+      <p class="s-sub">Cada projeto é uma etapa da minha jornada — da solução prática à paixão transformada em produto.</p>
+    </div>
+
+    <div class="proj-grid">
+
+      <!-- Gestão de Entregas -->
+      <div class="proj-card reveal rd1">
+        <div class="proj-thumb">
+          <canvas class="t-canvas" data-type="delivery"></canvas>
+          <div class="t-ov">
+            <span class="t-emoji">📦</span>
+            <span class="t-lbl">No-Code · AppSheet</span>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="pb pb-c">No-Code</span>
+            <span class="ps done">Concluído</span>
+          </div>
+          <h3>Gestão de Entregas</h3>
+          <p>App logístico completo com AppSheet e Google Workspace. Controla motoristas, pedidos, status e comprovação com foto de canhoto em tempo real.</p>
+          <div class="p-stack">
+            <span class="st">AppSheet</span>
+            <span class="st">Google Sheets</span>
+            <span class="st">Google Drive</span>
+          </div>
+          <div class="p-links">
+            <a href="https://github.com/yLordAkira/Aplicativo-para-Gestao-de-Entregas-Low-Code"
+               target="_blank" class="pla pri">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Darkin Lore -->
+      <div class="proj-card reveal rd2">
+        <div class="proj-thumb">
+          <canvas class="t-canvas" data-type="darkin"></canvas>
+          <div class="t-ov">
+            <span class="t-emoji">🩸</span>
+            <span class="t-lbl">Lore · League of Legends</span>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="pb pb-p">Criativo</span>
+            <span class="ps done">Concluído</span>
+          </div>
+          <h3>Darkin Lore Compendium</h3>
+          <p>Documentação interativa no NotebookLM explorando origem, queda e legado dos Darkin no universo de Runeterra.</p>
+          <div class="p-stack">
+            <span class="st">NotebookLM</span>
+            <span class="st">Markdown</span>
+            <span class="st">GitHub</span>
+          </div>
+          <div class="p-links">
+            <a href="https://github.com/yLordAkira/darkin-lore-project"
+               target="_blank" class="pla pri">GitHub ↗</a>
+            <a href="https://notebooklm.google.com/notebook/f35e9d16-1878-4442-bb89-b94397d97c6d"
+               target="_blank" class="pla sec">Notebook ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Backlog -->
+      <div class="proj-card reveal rd3">
+        <div class="proj-thumb">
+          <canvas class="t-canvas" data-type="backlog"></canvas>
+          <div class="t-ov">
+            <span class="t-emoji">🎮</span>
+            <span class="t-lbl">React · RAWG API</span>
+          </div>
+        </div>
+        <div class="proj-body">
+          <div class="proj-meta">
+            <span class="pb pb-g">Front-End</span>
+            <span class="ps wip">Em construção</span>
+          </div>
+          <h3>Game Backlog Tracker</h3>
+          <p>App em React para gerenciar lista de jogos. Busca via API RAWG, status — Quero Jogar, Jogando, Zerado — com persistência local.</p>
+          <div class="p-stack">
+            <span class="st">React</span>
+            <span class="st">Vite</span>
+            <span class="st">CSS Modules</span>
+            <span class="st">RAWG API</span>
+          </div>
+          <div class="p-links">
+            <a href="#" class="pla sec">Em breve ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JORNADA / TIMELINE -->
+  <div class="jw">
+    <div class="ji">
+
+      <div class="reveal">
+        <span class="s-tag">Trajetória</span>
+        <h2 class="s-title">Aprendizado contínuo</h2>
+        <p class="s-sub" style="margin-bottom: 3rem;">
+          Uma jornada em evolução — cada passo construiu o desenvolvedor de hoje.
+        </p>
+      </div>
+
+      <div class="tl">
+
+        <div class="tl-item reveal rd1">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Base técnica</div>
+          <h4>Técnico em Hardware e Redes</h4>
+          <p>Formação que estabeleceu o pensamento lógico e a visão sistêmica — base para entender tecnologia de ponta a ponta.</p>
+        </div>
+
+        <div class="tl-item reveal rd2">
+          <div class="tl-dot"></div>
+          <div class="tl-date">No-code &amp; produto</div>
+          <h4>Aplicativo de Gestão de Entregas</h4>
+          <p>Primeiro projeto de impacto real: sistema logístico completo com AppSheet, focado no usuário.</p>
+        </div>
+
+        <div class="tl-item reveal rd3">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Criatividade &amp; docs</div>
+          <h4>Darkin Lore Compendium</h4>
+          <p>Projeto pessoal unindo paixão por lore e boas práticas de documentação.</p>
+        </div>
+
+        <div class="tl-item reveal rd4">
+          <div class="tl-dot"></div>
+          <div class="tl-date">Front-End moderno</div>
+          <h4>Cursando ADS + React</h4>
+          <p>Aprofundando HTML, CSS, JavaScript e React — construindo projetos reais para consolidar o aprendizado.</p>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot now"></div>
+          <div class="tl-date" style="color: var(--a3);">Agora</div>
+          <h4>Pronto para o próximo passo</h4>
+          <p>Buscando a primeira oportunidade como estagiário ou dev júnior para crescer com uma equipe incrível.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTATO -->
+  <section class="s" id="contato">
+    <div class="cbox reveal">
+      <div class="cbox-glow"></div>
+      <h2>Vamos conversar?</h2>
+      <p>Estou em busca do meu primeiro estágio ou emprego como desenvolvedor. Se tiver uma oportunidade, me manda uma mensagem!</p>
+      <div class="c-links">
+        <a href="mailto:ylordakira@gmail.com" class="btn-glow">✉️ ylordakira@gmail.com</a>
+        <a href="https://linkedin.com/in/bruno-lopes-768888339" target="_blank" class="btn-ghost">LinkedIn →</a>
+        <a href="https://github.com/yLordAkira"               target="_blank" class="btn-ghost">GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span style="color: var(--a2);">// </span>
+    feito com dedicação por
+    <span style="color: var(--a1);">Bruno Lopes</span>
+    <span style="color: var(--a2);"> · </span>
+    2025
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
