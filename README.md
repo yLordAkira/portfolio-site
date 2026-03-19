@@ -38,7 +38,7 @@
 ## 📁 Estrutura do projeto
 
 ```
-portfolio-bruno/
+portfolio-site/
 │
 ├── index.html          # Estrutura HTML completa
 │
