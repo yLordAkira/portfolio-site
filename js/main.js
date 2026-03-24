@@ -287,6 +287,13 @@
   document.querySelectorAll('[data-target]').forEach(el => observer.observe(el));
 })();
 
+/* ── SKILL BARS ANIMATION ── */
+(function initSkillBars() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.cv-skill-fill').forEach(el => observer.observe(el));
+})();
 
 /* ── NAV SHRINK ON SCROLL ── */
 window.addEventListener('scroll', () => {
