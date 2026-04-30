@@ -175,12 +175,12 @@
 
       /* ── BACKLOG: scanlines + gamepad ── */
       } else {
-        ctx.fillStyle = '#001510';
+        ctx.fillStyle = '#120008';
         ctx.fillRect(0, 0, W, H);
 
         for (let y = 0; y < H; y += 16) {
           const p = Math.sin(t + y * 0.05) * 0.5 + 0.5;
-          ctx.fillStyle = `rgba(0,255,120,${0.02 + p * 0.02})`;
+          ctx.fillStyle = `rgba(255,40,90,${0.025 + p * 0.025})`;
           ctx.fillRect(0, y, W, 1);
         }
 
@@ -188,7 +188,7 @@
           const x = ((i / 6) * W + t * 15) % W;
           ctx.beginPath();
           ctx.moveTo(x, 0); ctx.lineTo(x, H);
-          ctx.strokeStyle = 'rgba(103,232,160,.04)';
+          ctx.strokeStyle = 'rgba(0,210,255,.06)';
           ctx.lineWidth = 1;
           ctx.stroke();
         }
@@ -197,7 +197,7 @@
         [[-22, 0], [22, 0], [0, -22], [0, 22]].forEach(([dx, dy]) => {
           ctx.beginPath();
           ctx.arc(cx + dx, cy + dy, 5, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(103,232,160,${0.12 + Math.sin(t * 2 + dx + dy) * 0.08})`;
+          ctx.fillStyle = `rgba(255,40,90,${0.16 + Math.sin(t * 2 + dx + dy) * 0.08})`;
           ctx.fill();
         });
       }

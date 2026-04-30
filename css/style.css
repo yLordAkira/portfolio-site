@@ -927,7 +927,7 @@ nav.scrolled { padding: .75rem 3rem; }
   gap: .35rem;
 }
 
-.ps.wip::before  { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #f7a467; display: inline-block; }
+.ps.wip::before  { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #67e8a0; display: inline-block; }
 .ps.done::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--a3); display: inline-block; box-shadow: 0 0 8px var(--a3); }
 
 .proj-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: .55rem; letter-spacing: -.01em; }
