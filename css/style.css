@@ -884,6 +884,13 @@ nav.scrolled { padding: .75rem 3rem; }
   animation: float 5s ease-in-out infinite;
 }
 
+.t-emoji img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
 .t-lbl {
   font-size: .68rem;
   color: rgba(255, 255, 255, .35);
@@ -944,7 +951,7 @@ nav.scrolled { padding: .75rem 3rem; }
   color: var(--muted);
 }
 
-.p-links { display: flex; gap: .65rem; }
+.p-links { display: flex; gap: .65rem; flex-wrap: wrap; }
 
 .pla {
   display: inline-flex;

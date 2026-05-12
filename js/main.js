@@ -173,6 +173,70 @@
         }
         ctx.restore();
 
+      /* ── FINDASH: finance dashboard ── */
+      } else if (type === 'findash') {
+        const grad = ctx.createLinearGradient(0, 0, W, H);
+        grad.addColorStop(0, '#001f1a');
+        grad.addColorStop(0.55, '#041226');
+        grad.addColorStop(1, '#11051f');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, W, H);
+
+        const gap = 28;
+        ctx.strokeStyle = 'rgba(103,232,160,.07)';
+        ctx.lineWidth = 1;
+        for (let x = -gap; x < W + gap; x += gap) {
+          ctx.beginPath();
+          ctx.moveTo(x + (t * 9) % gap, 0);
+          ctx.lineTo(x + (t * 9) % gap, H);
+          ctx.stroke();
+        }
+        for (let y = 0; y < H; y += gap) {
+          ctx.beginPath();
+          ctx.moveTo(0, y);
+          ctx.lineTo(W, y);
+          ctx.stroke();
+        }
+
+        const chart = [
+          [0.08, 0.70],
+          [0.22, 0.58],
+          [0.35, 0.63],
+          [0.50, 0.42],
+          [0.65, 0.48],
+          [0.82, 0.28],
+          [0.94, 0.34]
+        ];
+
+        ctx.beginPath();
+        chart.forEach(([x, y], i) => {
+          const px = x * W;
+          const py = y * H + Math.sin(t * 2 + i) * 5;
+          i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+        });
+        ctx.strokeStyle = 'rgba(103,232,160,.9)';
+        ctx.lineWidth = 3;
+        ctx.shadowColor = 'rgba(103,232,160,.55)';
+        ctx.shadowBlur = 18;
+        ctx.stroke();
+        ctx.shadowBlur = 0;
+
+        for (let i = 0; i < 5; i++) {
+          const bh = 26 + Math.sin(t * 1.8 + i) * 10 + i * 9;
+          const x = W * 0.14 + i * 32;
+          const y = H - 28 - bh;
+          ctx.fillStyle = `rgba(110,231,247,${0.16 + i * 0.035})`;
+          ctx.fillRect(x, y, 12, bh);
+        }
+
+        ctx.fillStyle = 'rgba(5,5,8,.45)';
+        ctx.fillRect(W - 120, 28, 82, 38);
+        ctx.strokeStyle = 'rgba(110,231,247,.22)';
+        ctx.strokeRect(W - 120, 28, 82, 38);
+        ctx.fillStyle = 'rgba(103,232,160,.9)';
+        ctx.font = '600 14px JetBrains Mono, monospace';
+        ctx.fillText('+18.4%', W - 106, 52);
+
       /* ── BACKLOG: scanlines + gamepad ── */
       } else {
         ctx.fillStyle = '#120008';
